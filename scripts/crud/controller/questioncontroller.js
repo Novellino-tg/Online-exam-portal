@@ -1,10 +1,7 @@
-// Button Click Attach
 window.addEventListener('load',init);
 var countDown;
 const printCounter=()=>
     document.querySelector('#id').innerText = countDown.next().value;
-    // document.querySelector('#id').innerHTML = "<b>"+countDown.next().value+"</b>";
-
 function toggleRed(){
     var id = this.getAttribute('qid');
 console.log("Toggle Red Call ",this, 'Id is ',id);
@@ -84,9 +81,6 @@ function save(){
     }
 }
 function fetchFromServer(){
-    // single record
-    //firebase.database().ref('/questions/100')
-    // all 
     var questions= firebase.database().ref('/questions');
     questions.on('value',(snapshot)=>{
         var allQuestionsObj = snapshot.val();
@@ -173,13 +167,4 @@ function addQuestion(){
     printQuestion(questionObject);
     updateCount();
     printCounter();
-
-    // console.log("Add Question Call");
-    // var fieldsname = ['id','name']; //keys
-    // var fieldsvalue = []; //values
-    // var index = 0;
-    // // Loop
-    // fieldvalue[index]= document.getElementById(fieldsname[index]).value;
-   // var id = document.getElementById('id').value;
-    //var name = document.getElementById('name').value;
 }
