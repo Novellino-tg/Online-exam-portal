@@ -1,0 +1,24 @@
+{
+  "name": "onlineexam-2019",
+  "description": "this is my exam project",
+  "main": "",
+  "keywords": [
+    "online",
+    "exam",
+  ],
+  "authors": [
+    "tushar"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
